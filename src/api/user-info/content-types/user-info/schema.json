@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_infos",
+  "info": {
+    "singularName": "user-info",
+    "pluralName": "user-infos",
+    "displayName": "UserInfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "default": "unknown",
+      "unique": false
+    },
+    "registration_date": {
+      "type": "datetime",
+      "default": "2023-01-01T00:30:00.000Z",
+      "required": true
+    },
+    "designation": {
+      "type": "enumeration",
+      "enum": [
+        "faculty",
+        "student",
+        "research_scholar",
+        "official",
+        "others"
+      ],
+      "default": "others",
+      "required": true
+    },
+    "blocked_status": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "access_status": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "access_from": {
+      "type": "datetime",
+      "default": "2023-01-01T00:30:00.000Z",
+      "required": true
+    },
+    "access_to": {
+      "type": "datetime",
+      "default": "2023-01-01T00:30:00.000Z",
+      "required": true
+    },
+    "vehicle_type": {
+      "type": "enumeration",
+      "enum": [
+        "four_wheeler_commercial",
+        "four_wheeler_personal",
+        "two_wheeler",
+        "others"
+      ],
+      "default": "others",
+      "required": true
+    },
+    "number_plate_code": {
+      "type": "string",
+      "required": true,
+      "default": "NA",
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "username",
+      "required": true
+    }
+  }
+}

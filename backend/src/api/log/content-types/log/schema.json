@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "logs",
+  "info": {
+    "singularName": "log",
+    "pluralName": "logs",
+    "displayName": "log",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "plateNumber": {
+      "type": "string",
+      "default": "NA",
+      "required": true,
+      "unique": true
+    },
+    "entryTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "leaveTime": {
+      "type": "datetime",
+      "required": true
+    },
+    "registered": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "access": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "registered_info": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::registered-info.registered-info"
+    },
+    "SLUG": {
+      "type": "uid",
+      "targetField": "plateNumber"
+    }
+  }
+}

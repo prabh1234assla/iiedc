@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "registered_infos",
+  "info": {
+    "singularName": "registered-info",
+    "pluralName": "registered-infos",
+    "displayName": "registeredInfo",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "validFrom": {
+      "type": "datetime",
+      "required": true
+    },
+    "validTo": {
+      "type": "datetime",
+      "required": true
+    },
+    "ownerName": {
+      "type": "string",
+      "default": "NA",
+      "required": true
+    },
+    "designation": {
+      "type": "enumeration",
+      "enum": [
+        "student",
+        "faculty",
+        "scholar",
+        "headOfficial",
+        "others"
+      ],
+      "default": "others",
+      "required": true
+    },
+    "vehicleType": {
+      "type": "enumeration",
+      "enum": [
+        "two-wheeler",
+        "four-wheeler"
+      ],
+      "default": "four-wheeler",
+      "required": true
+    },
+    "registeredOn": {
+      "type": "datetime",
+      "required": true
+    },
+    "SLUG": {
+      "type": "uid",
+      "targetField": "ownerName"
+    }
+  }
+}
