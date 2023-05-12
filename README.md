@@ -3,19 +3,19 @@
 >> all get requests will be sent by using BEARER TOKEN returned by the POST REQUEST that registers a new user (line 26)
 
 ### to get full userinfo :
-http://172.17.27.144:1337/api/user-infos
+- http://localhost:1337/api/user-infos
 
 ### to get full userinfo with full media details :
-http://172.17.27.144:1337/api/user-infos?populate=*
+- http://localhost:1337/api/user-infos?populate=*
 
 ### to get userinfo for particular username or platenumber :
-http://172.17.27.144:1337/api/user-infos?filters[username][$eq]=<NAME>
-http://172.17.27.144:1337/api/user-infos?filters[number_plate_code][$eq]=<CODE>
+- http://localhost:1337/api/user-infos?filters[username][$eq]=<NAME>
+- http://localhost:1337/api/user-infos?filters[number_plate_code][$eq]=<CODE>
 
 ## register yourself as a new user :
 method : **POST**
 
-http://172.17.27.144:1337/api/auth/local/register
+- http://localhost:1337/api/auth/local/register
 
 {
     "username" : "",
@@ -26,7 +26,7 @@ http://172.17.27.144:1337/api/auth/local/register
 ## to post data through api
 method : **POST**
 
-http://172.17.27.144:1337/api/user-infos
+- http://localhost:1337/api/user-infos
 
 {
     "data": {
